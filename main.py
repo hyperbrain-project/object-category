@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 
 from psychopy import prefs
 prefs.general['audioLib'] = ['pygame']
+prefs.hardware['videoLib'] = ['ffpyplayer']
 from psychopy import visual, event, core
 
 
@@ -33,7 +34,7 @@ if __name__ == '__main__':
 
     win = visual.Window(
         size=[1920, 1080], allowGUI=False, units='pix',
-        screen=0, color='#000000', fullscr=True)
+        screen=0, color='#000000', fullscr=True, checkTiming=False)
 
     clips = {}
     # for fn in sorted(glob(os.path.join('stimuli', '*', '*.mp4'))):
